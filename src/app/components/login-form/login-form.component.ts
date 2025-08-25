@@ -12,6 +12,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { merge } from 'rxjs';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { MatIconModule } from '@angular/material/icon';
+import { MatDividerModule } from '@angular/material/divider';
 
 @Component({
   selector: 'app-login-form',
@@ -23,6 +25,8 @@ import { MatGridListModule } from '@angular/material/grid-list';
     FormsModule,
     ReactiveFormsModule,
     MatGridListModule,
+    MatIconModule,
+    MatDividerModule,
   ],
   templateUrl: './login-form.component.html',
   styleUrl: './login-form.component.scss',
