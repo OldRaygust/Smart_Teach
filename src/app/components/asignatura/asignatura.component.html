@@ -1,1 +1,28 @@
-<p>asignatura works!</p>
+<div class="contenedor">
+  <h1 class="titulo">Asignaturas</h1>
+  <h3 class="subtitulo">Cursos</h3>
+  <hr />
+
+  <div class="grilla">
+    <div class="tarjeta" *ngFor="let asignatura of asignaturas">
+      <h4>{{ asignatura.nombre }} - {{ asignatura.curso }}</h4>
+      <div class="imagen">
+        <img
+          *ngIf="asignatura.imagen; else placeholder"
+          [src]="asignatura.imagen"
+          alt="{{ asignatura.nombre }}"
+        />
+        <ng-template #placeholder>
+          <div class="placeholder-img">🖼️</div>
+        </ng-template>
+      </div>
+      <p>{{ asignatura.descripcion }}</p>
+      <button
+        class="btn-planificacion"
+        (click)="definirPlanificacion(asignatura)"
+      >
+        Definir Planificación
+      </button>
+    </div>
+  </div>
+</div>
