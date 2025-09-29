@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 
 interface Asignatura {
@@ -9,7 +10,7 @@ interface Asignatura {
 
 @Component({
   selector: 'app-asignatura',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './asignatura.component.html',
   styleUrl: './asignatura.component.scss',
 })
