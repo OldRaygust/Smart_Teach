@@ -2,6 +2,7 @@ import { Routes } from '@angular/router';
 import { LoginPpageComponent } from './views/login-ppage/login-ppage.component';
 import { DashboardComponent } from './views/dashboard/dashboard.component';
 import { AsignaturasComponent } from './views/asignaturas/asignaturas.component';
+import { FormularioComponent } from './views/formulario/formulario.component';
 
 export const routes: Routes = [
   {
@@ -10,5 +11,6 @@ export const routes: Routes = [
   },
   { path: 'dashboard', component: DashboardComponent },
   { path: 'asignaturas', component: AsignaturasComponent },
+  { path: 'formulario', component: FormularioComponent },
   { path: '', redirectTo: '/login', pathMatch: 'full' },
 ];
