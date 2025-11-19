@@ -1,1 +1,40 @@
-<p>avance works!</p>
+<div class="container">
+  <h1>Asignaturas</h1>
+
+  <div class="curso-info">
+    <p><strong>Curso:</strong> Asignatura - Curso #</p>
+    <p>Unidad 1</p>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Número de clase</th>
+        <th>Tema</th>
+        <th>Completado</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let clase of clases">
+        <td>{{ clase.numero }}</td>
+        <td>{{ clase.tema }}</td>
+        <td>
+          <label class="switch">
+            <input type="checkbox" />
+            <span class="slider"></span>
+          </label>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="acciones">
+    <button class="btn">Editar</button>
+    <button class="btn">Añadir</button>
+  </div>
+
+  <div class="nota">
+    <p>Presionar este botón para actualizar avance pedagógico.</p>
+  </div>
+</div>
