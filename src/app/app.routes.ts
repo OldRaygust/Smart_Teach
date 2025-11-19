@@ -3,6 +3,7 @@ import { LoginPpageComponent } from './views/login-ppage/login-ppage.component';
 import { DashboardComponent } from './views/dashboard/dashboard.component';
 import { AsignaturasComponent } from './views/asignaturas/asignaturas.component';
 import { FormularioComponent } from './views/formulario/formulario.component';
+import { AvanceAsignaturaComponent } from './views/avance-asignatura/avance-asignatura.component';
 
 export const routes: Routes = [
   {
@@ -12,5 +13,7 @@ export const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent },
   { path: 'asignaturas', component: AsignaturasComponent },
   { path: 'formulario', component: FormularioComponent },
-  { path: '', redirectTo: '/login', pathMatch: 'full' },
+  { path: 'avance', component: AvanceAsignaturaComponent },
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
+  { path: '**', redirectTo: 'login', pathMatch: 'full' },
 ];
