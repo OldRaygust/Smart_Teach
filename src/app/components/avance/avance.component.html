@@ -16,9 +16,12 @@
     </thead>
 
     <tbody>
-      <tr *ngFor="let clase of clases">
+      <tr>
+        @for(clase of clases; track clase) {
         <td>{{ clase.numero }}</td>
         <td>{{ clase.tema }}</td>
+        }
+
         <td>
           <label class="switch">
             <input type="checkbox" />
