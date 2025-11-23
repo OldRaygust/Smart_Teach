@@ -1,0 +1,49 @@
+.user-capsule {
+  display: flex; /* Usa flexbox para alinear los elementos */
+  align-items: center; /* Centra verticalmente los elementos */
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: sans-serif;
+  width: 20%;
+  height: 100%;
+}
+
+.user-avatar {
+  width: 10%;
+  height: 90%;
+  border-radius: 50%; /* Hace la imagen redonda */
+  margin-right: 15px;
+}
+
+.user-info {
+  flex-grow: 1; /* Permite que esta parte ocupe el espacio restante */
+}
+
+.user-info h2 {
+  margin: 0 0 5px 0;
+  font-size: 1.2em;
+  color: #333;
+}
+
+.user-info p {
+  margin: 0;
+  font-size: 0.9em;
+  color: #666;
+}
+
+.user-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 15px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+/* Para evitar que el texto sea seleccionable */
+.user-info p {
+  user-select: none; /* O 'text' si quieres que sea seleccionable */
+}

@@ -1,12 +1,25 @@
 .sidebar {
-  width: 90px;
+  width: 100%;
   height: 100vh;
-  background-color: #a9a9a9; /* gris */
-  display: flex;
+  background-color: #d3f1ff5c; /* gris */
+  display: grid;
+  grid-template-rows: 5% 95%;
+  grid-template-columns: 100%;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 0;
+  padding: 0;
+  border: 2px solid darkgray;
+  border-radius: 0px 0px 10px 0px;
+}
+
+.items {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  gap: 2%;
+  padding-top: 10px;
+  align-items: center;
 }
 
 .logo {
@@ -16,11 +29,12 @@
 }
 
 .menu-item {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 30% 70%;
   align-items: center;
-  margin: 15px 0;
+  justify-items: center;
   cursor: pointer;
+  width: 80%;
 }
 
 .menu-item img {
@@ -46,4 +60,21 @@
 
 .btn-cerrar:hover {
   background-color: #e64a35;
+}
+
+.btn-animado {
+  background: #d1bcf0;
+  color: white;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.btn-animado:hover {
+  transform: scale(1.01);
+  background: #e0d7f8;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
 }

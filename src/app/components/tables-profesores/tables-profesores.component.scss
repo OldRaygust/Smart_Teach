@@ -1,0 +1,61 @@
+.title {
+  font-size: 18px;
+  margin-bottom: 12px;
+  color: #333;
+}
+
+.tbl {
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+thead {
+  background: #eef3ff;
+}
+
+th,
+td {
+  padding: 12px;
+  text-align: left;
+}
+
+tbody tr {
+  transition: background 0.25s ease;
+}
+
+tbody tr:hover {
+  background: #f5f7ff;
+}
+
+.estado {
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.estado.borrador {
+  color: #555;
+}
+.estado.publicado {
+  color: #2a9d8f;
+}
+.estado.pendiente {
+  color: #e9a23b;
+}
+
+.fade-in {
+  animation: fade 0.6s ease;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+    transform: translateY(7px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
