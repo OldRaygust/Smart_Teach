@@ -14,6 +14,7 @@ import { merge } from 'rxjs';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login-form',
@@ -32,6 +33,7 @@ import { MatDividerModule } from '@angular/material/divider';
   styleUrl: './login-form.component.scss',
 })
 export class LoginFormComponent {
+  constructor(private router: Router) {}
   showFiller = false;
 
   readonly email = new FormControl('', [Validators.required, Validators.email]);
@@ -45,5 +47,8 @@ export class LoginFormComponent {
     } else {
       this.errorMessage.set('');
     }
+  }
+  dashboard() {
+    this.router.navigate(['dashboard']);
   }
 }
