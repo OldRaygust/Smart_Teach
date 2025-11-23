@@ -1,44 +1,82 @@
-import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import jsPDF from 'jspdf';
-import html2canvas from 'html2canvas';
-interface Experience {
-  titulo: string;
-  empleador: string;
-  ciudad: string;
-  inicio: string;
-  fin: string;
-  descripcion: string;
-}
+import { FormBuilder, FormGroup } from '@angular/forms';
 
+import { ReactiveFormsModule } from '@angular/forms';
+
+interface Seccion {
+  id: number;
+  titulo: string;
+  descripcion: string;
+  sugerencias: string[];
+  expandido: boolean;
+  control: string;
+}
 @Component({
   selector: 'app-formulario-edicion-planificacion',
-  imports: [FormsModule, CommonModule],
+  imports: [ReactiveFormsModule],
   templateUrl: './formulario-edicion-planificacion.component.html',
   styleUrl: './formulario-edicion-planificacion.component.scss',
 })
 export class FormularioEdicionPlanificacionComponent {
-  experiences: Experience[] = [];
+  form: FormGroup;
 
-  newExperience: Experience = {
-    titulo: '',
-    empleador: '',
-    ciudad: '',
-    inicio: '',
-    fin: '',
-    descripcion: '',
-  };
+  secciones: Seccion[] = [
+    {
+      id: 1,
+      titulo: 'Apertura (5–10 min)',
+      descripcion: 'Activar conocimientos previos y motivar.',
+      sugerencias: [
+        'Preguntas generadoras',
+        'Presentación del propósito',
+        'Actividad breve de calentamiento',
+      ],
+      expandido: false,
+      control: 'apertura',
+    },
+    {
+      id: 2,
+      titulo: 'Desarrollo (25–40 min)',
+      descripcion: 'Construcción del aprendizaje.',
+      sugerencias: [
+        'Explicación del tema central',
+        'Lectura guiada o análisis de texto',
+        'Trabajo grupal o por parejas',
+      ],
+      expandido: false,
+      control: 'desarrollo',
+    },
+    {
+      id: 3,
+      titulo: 'Práctica (10–20 min)',
+      descripcion: 'Aplicación de lo aprendido.',
+      sugerencias: [
+        'Ejercicios individuales',
+        'Producción escrita corta',
+        'Resolución de actividades',
+      ],
+      expandido: false,
+      control: 'practica',
+    },
+    {
+      id: 4,
+      titulo: 'Cierre (5–10 min)',
+      descripcion: 'Revisión y evaluación.',
+      sugerencias: [
+        'Síntesis final',
+        'Preguntas de reflexión',
+        'Mini evaluación',
+      ],
+      expandido: false,
+      control: 'cierre',
+    },
+  ];
 
-  addExperience() {
-    this.experiences.push({ ...this.newExperience });
-    this.newExperience = {
-      titulo: '',
-      empleador: '',
-      ciudad: '',
-      inicio: '',
-      fin: '',
-      descripcion: '',
-    };
+  constructor(private fb: FormBuilder) {
+    this.form = this.fb.group({
+      apertura: [''],
+      desarrollo: [''],
+      practica: [''],
+      cierre: [''],
+    });
   }
 }

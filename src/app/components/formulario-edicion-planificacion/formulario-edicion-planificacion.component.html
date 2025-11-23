@@ -1,29 +1,45 @@
-<!-- app.component.html -->
-<div class="container">
-  <!-- Panel izquierdo -->
-  <div class="form-panel">
-    <div class="modulo card">
-      <h3>Añadir Experiencia</h3>
-      <input type="text" placeholder="Título del trabajo" />
-      <input type="text" placeholder="Empleador" />
-      <input type="text" placeholder="Ciudad" />
-      <input type="month" placeholder="Inicio" />
-      <input type="month" placeholder="Fin" />
-      <textarea placeholder="Descripción"></textarea>
-      <button (click)="addExperience()">Agregar</button>
+<div class="layout">
+  <!-- IZQUIERDA: Tarjetas -->
+  <div class="left">
+    @for (sec of secciones; track sec.id) {
+
+    <div class="card">
+      <h3>{{ sec.titulo }}</h3>
+      <p>{{ sec.descripcion }}</p>
+
+      <div class="contenido">
+        <strong>Sugerencias:</strong>
+        <ul>
+          @for (s of sec.sugerencias; track s) {
+          <li>{{ s }}</li>
+          }
+        </ul>
+
+        <textarea
+          placeholder="Escribe aquí la planificación de esta sección..."
+        >
+        </textarea>
+      </div>
     </div>
+    }
   </div>
 
-  <!-- Panel derecho -->
-  <div class="preview-panel">
-    <h2>Vista Previa del CV</h2>
-    <div *ngFor="let exp of experiences" class="preview-card">
-      <h3>{{ exp.titulo }}</h3>
-      <p>
-        <strong>{{ exp.empleador }}</strong> | {{ exp.ciudad }}
-      </p>
-      <p>{{ exp.inicio }} - {{ exp.fin }}</p>
-      <p>{{ exp.descripcion }}</p>
+  <!-- DERECHA: Vista Previa -->
+  <div class="right">
+    <h2>Vista Previa de la Clase</h2>
+
+    <div class="preview">
+      <h3>Apertura</h3>
+      <p>{{ form.value.apertura }}</p>
+
+      <h3>Desarrollo</h3>
+      <p>{{ form.value.desarrollo }}</p>
+
+      <h3>Práctica</h3>
+      <p>{{ form.value.practica }}</p>
+
+      <h3>Cierre</h3>
+      <p>{{ form.value.cierre }}</p>
     </div>
   </div>
 </div>

@@ -11,16 +11,19 @@
       <tr>
         <th>Número de clase</th>
         <th>Tema</th>
+        <th>Material asignado</th>
+        <th>Actividad asignada</th>
         <th>Completado</th>
       </tr>
     </thead>
 
     <tbody>
+      @for(clase of clases; track clase){
       <tr>
-        @for(clase of clases; track clase) {
         <td>{{ clase.numero }}</td>
+        <td>{{ clase.material }}</td>
+        <td>{{ clase.actividad }}</td>
         <td>{{ clase.tema }}</td>
-        }
 
         <td>
           <label class="switch">
@@ -29,6 +32,7 @@
           </label>
         </td>
       </tr>
+      }
     </tbody>
   </table>
 

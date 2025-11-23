@@ -1,33 +1,49 @@
-/* app.component.css */
-.container {
+.layout {
   display: flex;
   gap: 20px;
+  padding: 20px;
 }
 
-.form-panel {
+.left {
   flex: 1;
-  background: #f4f4f4;
-  padding: 15px;
-  border-radius: 8px;
 }
 
-.form-panel input,
-.form-panel textarea {
+.right {
+  flex: 1;
+  background: #fafafa;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+}
+
+.card {
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: scale(1.01);
+  transition: 0.2s;
+}
+
+.contenido {
+  margin-top: 10px;
+}
+
+textarea {
   width: 100%;
-  margin-bottom: 10px;
+  margin-top: 10px;
+  min-height: 100px;
+  resize: vertical;
   padding: 8px;
-}
-
-.preview-panel {
-  flex: 2;
-  background: #fff;
-  padding: 15px;
   border-radius: 8px;
   border: 1px solid #ccc;
 }
 
-.preview-card {
-  margin-bottom: 20px;
-  border-bottom: 1px solid #ddd;
-  padding-bottom: 10px;
+.preview h3 {
+  margin-top: 15px;
 }

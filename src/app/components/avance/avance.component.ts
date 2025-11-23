@@ -5,15 +5,37 @@ import { Component } from '@angular/core';
   selector: 'app-avance',
   imports: [CommonModule],
   templateUrl: './avance.component.html',
-  styleUrl: './avance.component.scss'
+  styleUrl: './avance.component.scss',
 })
 export class AvanceComponent {
-
   clases = [
-    { numero: 1, tema: 'Suma', completado: true },
-    { numero: 2, tema: 'Resta', completado: false },
-    { numero: 3, tema: 'Multiplicación', completado: true },
-    { numero: 4, tema: 'División', completado: false }
+    {
+      numero: 1,
+      tema: 'Suma',
+      completado: true,
+      material: 'A',
+      actividad: 'B',
+    },
+    {
+      numero: 2,
+      tema: 'Resta',
+      completado: false,
+      material: 'A',
+      actividad: 'B',
+    },
+    {
+      numero: 3,
+      tema: 'Multiplicación',
+      completado: true,
+      material: 'A',
+      actividad: 'B',
+    },
+    {
+      numero: 4,
+      tema: 'División',
+      completado: false,
+      material: 'A',
+      actividad: 'B',
+    },
   ];
-
 }
