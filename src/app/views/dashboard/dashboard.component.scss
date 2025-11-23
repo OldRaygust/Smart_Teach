@@ -1,5 +1,6 @@
 .app-container {
-  display: flex;
+  display: grid;
+  grid-template-columns: 15% 85%;
   height: 100vh;
 }
 
@@ -18,4 +19,9 @@ app-sidebar {
   display: grid;
   grid-template-rows: 5% 95%;
   grid-template-columns: 100%;
+}
+
+app-usuario-menu {
+  display: flex;
+  justify-content: end;
 }

@@ -1,16 +1,21 @@
 <div class="sidebar">
   <div class="logo">
-    <p>Colegio X</p>
+    <a href="dashboard"><p class="colegio_Titulo">Colegio X</p></a>
   </div>
   <div class="items">
-    <div class="menu-item btn-animado">
+    <button (click)="dashboardRouting()" class="menu-item btn-animado">
+      <img src="/assets/icons/asignatura.png" />
+      <span>Inicio</span>
+    </button>
+
+    <button (click)="asignaturasRouting()" class="menu-item btn-animado">
       <img src="/assets/icons/asignatura.png" />
       <span>Asignaturas</span>
-    </div>
+    </button>
 
-    <div class="menu-item btn-animado">
+    <button (click)="materialRouting()" class="menu-item btn-animado">
       <img src="/assets/icons/material.png" alt="Material Educativo" />
       <span>Material Educativo</span>
-    </div>
+    </button>
   </div>
 </div>
