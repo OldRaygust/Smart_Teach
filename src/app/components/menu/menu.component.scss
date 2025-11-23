@@ -19,6 +19,7 @@
   height: 100%;
   gap: 2%;
   padding-top: 10px;
+  align-items: center;
 }
 
 .logo {
@@ -33,7 +34,7 @@
   align-items: center;
   justify-items: center;
   cursor: pointer;
-  width: 100%;
+  width: 80%;
 }
 
 .menu-item img {
@@ -59,4 +60,21 @@
 
 .btn-cerrar:hover {
   background-color: #e64a35;
+}
+
+.btn-animado {
+  background: #d1bcf0;
+  color: white;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.btn-animado:hover {
+  transform: scale(1.01);
+  background: #e0d7f8;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
 }
