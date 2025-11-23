@@ -1,0 +1,21 @@
+<h2 class="title">Planificaciones</h2>
+
+<table class="tbl fade-in">
+  <thead>
+    <tr>
+      <th>Asignatura</th>
+      <th>Unidad</th>
+      <th>Fecha</th>
+      <th>Estado</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let p of planificaciones">
+      <td>{{ p.asignatura }}</td>
+      <td>{{ p.unidad }}</td>
+      <td>{{ p.fecha }}</td>
+      <td class="estado" [class]="p.estado.toLowerCase()">{{ p.estado }}</td>
+    </tr>
+  </tbody>
+</table>
