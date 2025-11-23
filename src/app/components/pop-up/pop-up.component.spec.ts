@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PorUpGenericaComponent } from './por-up-generica.component';
+import { PopUpComponent } from './pop-up.component';
 
-describe('PorUpGenericaComponent', () => {
-  let component: PorUpGenericaComponent;
-  let fixture: ComponentFixture<PorUpGenericaComponent>;
+describe('PopUpComponent', () => {
+  let component: PopUpComponent;
+  let fixture: ComponentFixture<PopUpComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [PorUpGenericaComponent]
+      imports: [PopUpComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(PorUpGenericaComponent);
+    fixture = TestBed.createComponent(PopUpComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
