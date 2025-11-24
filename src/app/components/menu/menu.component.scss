@@ -38,8 +38,8 @@
 }
 
 .menu-item img {
-  width: 40px;
-  height: 40px;
+  width: 20px;
+  height: 20px;
   margin-bottom: 5px;
 }
 
@@ -65,7 +65,7 @@
 .btn-animado {
   background: #d1bcf0;
   color: white;
-  padding: 12px 28px;
+  padding: 10px 10px;
   border: none;
   border-radius: 8px;
   cursor: pointer;
@@ -77,4 +77,13 @@
   transform: scale(1.01);
   background: #e0d7f8;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.colegio_Titulo {
+  color: black;
+  text-decoration-line: none;
+}
+
+a {
+  text-decoration-line: none;
 }
