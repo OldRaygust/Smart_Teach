@@ -1,1 +1,38 @@
-<p>repositorio works!</p>
+<div class="layout">
+  <!-- LISTA DE MATERIALES -->
+  <div class="lista">
+    <h2>Material Educativo</h2>
+    <p class="sub">Documentos generados por la plataforma</p>
+
+    @for (r of recursos; track r.id) {
+
+    <div class="item" (click)="verRecurso(r)">
+      <h3>{{ r.titulo }}</h3>
+      <p class="tipo">{{ r.tipo }} — {{ r.fecha }}</p>
+      <p class="desc">{{ r.descripcion }}</p>
+
+      <div class="acciones">
+        <button (click)="descargar(r); $event.stopPropagation()">
+          Descargar
+        </button>
+        <button class="rojo" (click)="eliminar(r.id); $event.stopPropagation()">
+          Eliminar
+        </button>
+      </div>
+    </div>
+
+    }
+  </div>
+
+  <!-- VISTA PREVIA -->
+  <div class="preview" *ngIf="seleccionado">
+    <button class="volver" (click)="cerrarVista()">← Volver</button>
+
+    <h2>{{ seleccionado.titulo }}</h2>
+    <p class="detalle">{{ seleccionado.tipo }} — {{ seleccionado.fecha }}</p>
+
+    <pre class="contenido"
+      >{{ seleccionado.contenido }}
+    </pre>
+  </div>
+</div>
