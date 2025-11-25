@@ -22,6 +22,11 @@
     </div>
 
     }
+    <div class="header-lista">
+      <button class="btn-generar" (click)="abrirModal()">
+        + Generar material
+      </button>
+    </div>
   </div>
 
   <!-- VISTA PREVIA -->
@@ -35,4 +40,6 @@
       >{{ seleccionado.contenido }}
     </pre>
   </div>
+  <app-pop-up *ngIf="modalAbierto" (cerrarModal)="modalAbierto = false">
+  </app-pop-up>
 </div>

@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { jsPDF } from 'jspdf';
+import { PopUpComponent } from '../pop-up/pop-up.component';
 
 interface RecursoEducativo {
   id: number;
@@ -13,7 +14,7 @@ interface RecursoEducativo {
 
 @Component({
   selector: 'app-repositorio',
-  imports: [CommonModule],
+  imports: [CommonModule, PopUpComponent],
   templateUrl: './repositorio.component.html',
   styleUrl: './repositorio.component.scss',
 })
@@ -75,5 +76,11 @@ export class RepositorioComponent {
   eliminar(id: number) {
     this.recursos = this.recursos.filter((r) => r.id !== id);
     if (this.seleccionado?.id === id) this.seleccionado = null;
+  }
+
+  modalAbierto = false;
+
+  abrirModal() {
+    this.modalAbierto = true;
   }
 }

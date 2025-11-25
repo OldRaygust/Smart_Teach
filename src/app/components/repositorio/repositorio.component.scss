@@ -126,3 +126,24 @@ pre.contenido {
   font-family: "Inter", sans-serif;
   color: #0a2342;
 }
+
+.header-lista {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn-generar {
+  background: #1a73e8;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.2s ease-in-out;
+}
+
+.btn-generar:hover {
+  background: #135ec2;
+}
