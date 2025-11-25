@@ -1,65 +1,87 @@
+/* ---------------- CONTENEDOR GENERAL ---------------- */
 .contenedor {
   padding: 2rem;
+  background: #f5f9ff; /* Fondo azul muy suave */
 }
 
+/* ---------------- TITULOS ---------------- */
 .titulo {
   text-align: center;
-  font-weight: bold;
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: #0a2342; /* Azul oscuro legible */
 }
 
 .subtitulo {
   margin-top: 1rem;
+  color: #1b3358;
+  font-weight: 600;
 }
 
+/* ---------------- GRID ---------------- */
 .grilla {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   gap: 2rem;
   margin-top: 2rem;
 }
 
+/* ---------------- TARJETAS ---------------- */
 .tarjeta {
-  border: 1px solid #ddd;
+  background: #ffffff;
+  border: 1px solid #d0e2ff; /* Borde azul claro */
   border-radius: 16px;
   padding: 1.5rem;
   text-align: center;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s ease;
+
+  box-shadow: 0 4px 10px rgba(30, 136, 229, 0.12); /* sombra azul muy suave */
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .tarjeta:hover {
-  transform: translateY(-4px);
+  transform: translateY(-6px);
+  box-shadow: 0 8px 18px rgba(21, 101, 192, 0.25); /* sombra azul más marcada */
 }
 
+/* ---------------- IMAGEN ---------------- */
 .imagen {
   margin: 1rem 0;
-  height: 120px;
+  height: 140px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .placeholder-img {
-  width: 100px;
-  height: 100px;
-  background: #f1f1f1;
-  border-radius: 8px;
+  width: 110px;
+  height: 110px;
+  background: #e6efff; /* Azul muy claro */
+  border-radius: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 2rem;
-  color: #aaa;
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #1e88e5; /* Azul Material */
 }
 
+/* ---------------- BOTÓN ---------------- */
 .btn-planificacion {
-  background-color: #9be2b8;
+  background-color: #1e88e5; /* Azul Material */
+  color: white;
   border: none;
-  border-radius: 8px;
-  padding: 0.6rem 1rem;
+  border-radius: 10px;
+  padding: 0.7rem 1.1rem;
   cursor: pointer;
-  transition: background-color 0.2s ease;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+
+  transition: background-color 0.25s ease, transform 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
 .btn-planificacion:hover {
-  background-color: #7ad7a1;
+  background-color: #1565c0; /* Azul Material oscuro */
+  transform: scale(1.03);
+  box-shadow: 0 4px 14px rgba(21, 101, 192, 0.35);
 }

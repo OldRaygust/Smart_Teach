@@ -8,6 +8,7 @@ import { PlaygroundComponent } from './components/playground/playground.componen
 import { MaterialEducativoComponent } from './views/material-educativo/material-educativo.component';
 import { PantallaCargaEdicionComponent } from './components/pantalla-carga-edicion/pantalla-carga-edicion.component';
 import { FormularioAdicionComponent } from './views/formulario-adicion/formulario-adicion.component';
+import { ConfiguracionComponent } from './views/configuracion/configuracion.component';
 
 export const routes: Routes = [
   { path: 'login', component: LoginPpageComponent },
@@ -17,6 +18,7 @@ export const routes: Routes = [
   { path: 'repositorio', component: MaterialEducativoComponent },
   { path: 'carga_edicion', component: PantallaCargaEdicionComponent },
   { path: 'formulario_anadir', component: FormularioAdicionComponent },
+  { path: 'configuracion', component: ConfiguracionComponent },
   { path: 'avance', component: AvanceAsignaturaComponent },
   { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: 'playground', component: PlaygroundComponent },
