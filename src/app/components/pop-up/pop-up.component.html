@@ -1,1 +1,48 @@
-<p>pop-up works!</p>
+<div class="modal-backdrop" (click)="cerrar()"></div>
+
+<div class="modal" [formGroup]="form">
+  <h2>Generar material educativo</h2>
+
+  <div class="form-grid">
+    <label>Asignatura</label>
+    <select formControlName="asignatura">
+      <option value="" disabled selected>Seleccione...</option>
+      <option *ngFor="let a of asignaturas">{{ a }}</option>
+    </select>
+
+    <label>Unidad</label>
+    <select formControlName="unidad">
+      <option value="" disabled selected>Seleccione...</option>
+      <option *ngFor="let u of unidades">{{ u }}</option>
+    </select>
+
+    <label>Número de clase</label>
+    <select formControlName="clase">
+      <option value="" disabled selected>Seleccione...</option>
+      <option *ngFor="let c of clases">{{ c }}</option>
+    </select>
+
+    <label>Cantidad de preguntas</label>
+    <input type="number" min="1" formControlName="cantidadPreguntas" />
+
+    <label>Tipo de evaluación</label>
+    <select formControlName="tipoEvaluacion">
+      <option value="" disabled selected>Seleccione...</option>
+      <option>Control</option>
+      <option>Prueba</option>
+    </select>
+
+    <label>Tipo de preguntas</label>
+    <select formControlName="tipoPreguntas">
+      <option value="" disabled selected>Seleccione...</option>
+      <option>Alternativas</option>
+      <option>Selección múltiple</option>
+      <option>Desarrollo</option>
+    </select>
+  </div>
+
+  <div class="acciones">
+    <button class="btn cancelar" (click)="cerrar()">Cancelar</button>
+    <button class="btn generar" (click)="generar()">Generar</button>
+  </div>
+</div>

@@ -24,21 +24,27 @@ export class AsignaturaComponent implements OnInit {
     this.asignaturas = [
       //Aqui se podra hacer que sea dinamico.
       {
-        nombre: 'Matemáticas',
-        curso: '1° Medio',
-        descripcion: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+        nombre: 'Lenguaje y Comunicación',
+        curso: '1º Basico A',
+        descripcion: 'Estado: Sin iniciar.',
         imagen: '',
       },
       {
-        nombre: 'Historia',
-        curso: '2° Medio',
-        descripcion: 'Suspendisse id lorem in mi fermentum porta.',
+        nombre: 'Lenguaje y Comunicación',
+        curso: '1º Basico B',
+        descripcion: 'Estado: Al dia.',
         imagen: '',
       },
       {
-        nombre: 'Lenguaje',
-        curso: '3° Medio',
-        descripcion: 'Nulla facilisi. Donec vel nisl a justo.',
+        nombre: 'Lenguaje y Comunicación',
+        curso: '3º Basico A',
+        descripcion: 'Estado: Atrasado.',
+        imagen: '',
+      },
+      {
+        nombre: 'Lenguaje y Comunicación',
+        curso: '3º Basico A',
+        descripcion: 'Estado: Completado.',
         imagen: '',
       },
     ];

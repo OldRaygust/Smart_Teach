@@ -1,5 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { jsPDF } from 'jspdf';
+import { PopUpComponent } from '../pop-up/pop-up.component';
 
 interface RecursoEducativo {
   id: number;
@@ -12,7 +14,7 @@ interface RecursoEducativo {
 
 @Component({
   selector: 'app-repositorio',
-  imports: [CommonModule],
+  imports: [CommonModule, PopUpComponent],
   templateUrl: './repositorio.component.html',
   styleUrl: './repositorio.component.scss',
 })
@@ -56,11 +58,29 @@ export class RepositorioComponent {
   }
 
   descargar(recurso: RecursoEducativo) {
-    alert('Simulación de descarga: ' + recurso.titulo);
+    const pdf = new jsPDF();
+
+    pdf.setFontSize(16);
+    pdf.text(recurso.titulo, 10, 10);
+
+    pdf.setFontSize(12);
+    pdf.text('Descripción:', 10, 20);
+    pdf.text(recurso.descripcion || 'Sin descripción', 10, 28);
+
+    pdf.text('Contenido:', 10, 40);
+    pdf.text(recurso.contenido || 'Contenido no disponible', 10, 48);
+
+    pdf.save(recurso.titulo + '.pdf');
   }
 
   eliminar(id: number) {
     this.recursos = this.recursos.filter((r) => r.id !== id);
     if (this.seleccionado?.id === id) this.seleccionado = null;
+  }
+
+  modalAbierto = false;
+
+  abrirModal() {
+    this.modalAbierto = true;
   }
 }

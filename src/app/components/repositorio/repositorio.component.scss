@@ -1,91 +1,149 @@
+/* ---------------- LAYOUT GENERAL ---------------- */
 .layout {
   display: flex;
   gap: 25px;
   padding: 25px;
+  background: #f5f9ff; /* azul muy suave */
 }
 
-/* COLUMNA IZQUIERDA */
+/* ---------------- COLUMNA IZQUIERDA ---------------- */
 .lista {
   flex: 1;
 }
 
 .lista h2 {
   margin-bottom: 5px;
+  color: #0a2342; /* azul oscuro */
+  font-weight: 700;
 }
 
 .sub {
   margin-bottom: 20px;
-  color: #666;
+  color: #39527b;
+  font-size: 14px;
+  font-weight: 500;
 }
 
+/* ---------------- ITEMS ---------------- */
 .item {
-  background: #fff;
+  background: #ffffff;
   padding: 15px;
-  border-radius: 12px;
+  border-radius: 14px;
   margin-bottom: 15px;
-  border: 1px solid #ddd;
+  border: 1px solid #cfe0ff; /* azul claro */
   cursor: pointer;
-  transition: 0.2s;
+
+  box-shadow: 0 3px 10px rgba(30, 136, 229, 0.12);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
 }
 
 .item:hover {
-  transform: scale(1.01);
+  transform: scale(1.02);
+  box-shadow: 0 6px 16px rgba(21, 101, 192, 0.25);
 }
 
+/* ---------------- TIPOS Y TEXTOS ---------------- */
 .tipo {
   font-size: 14px;
-  color: #444;
+  color: #0a2342; /* más fuerte */
+  font-weight: 600;
   margin-bottom: 5px;
 }
 
 .desc {
-  color: #777;
+  color: #5a6c87;
   font-size: 14px;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
+/* ---------------- ACCIONES ---------------- */
 .acciones {
   display: flex;
   gap: 10px;
 }
 
 button {
-  padding: 6px 12px;
+  padding: 7px 14px;
   border: none;
-  background: #2b6ae5;
-  border-radius: 6px;
+  background: #1e88e5; /* Material Blue */
+  border-radius: 8px;
   color: white;
   cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+
+  transition: background 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+button:hover {
+  background: #1565c0;
+  transform: scale(1.03);
+  box-shadow: 0 3px 8px rgba(21, 101, 192, 0.35);
 }
 
 button.rojo {
-  background: #d9534f;
+  background: #e53935; /* Material red */
 }
 
-/* VISTA PREVIA A LA DERECHA */
+button.rojo:hover {
+  background: #c62828;
+  box-shadow: 0 3px 9px rgba(198, 40, 40, 0.35);
+}
+
+/* ---------------- VISTA PREVIA (DERECHA) ---------------- */
 .preview {
   flex: 1;
-  background: #fafafa;
-  padding: 20px;
-  border-radius: 12px;
-  border: 1px solid #ddd;
+  background: #ffffff;
+  padding: 22px;
+  border-radius: 14px;
+  border: 1px solid #cfe0ff;
+  box-shadow: 0 4px 12px rgba(30, 136, 229, 0.12);
 }
 
 .volver {
-  background: #444;
-  margin-bottom: 15px;
+  background: #263b5e;
+  margin-bottom: 18px;
 }
 
+.volver:hover {
+  background: #1b2d4a;
+}
+
+/* ---------------- DETALLE ---------------- */
 .detalle {
-  color: #555;
+  color: #39527b;
+  font-size: 15px;
   margin-bottom: 20px;
 }
 
+/* ---------------- CONTENIDO ---------------- */
 pre.contenido {
   white-space: pre-wrap;
-  background: #fff;
-  border-radius: 10px;
-  padding: 15px;
-  border: 1px solid #ddd;
-  font-family: inherit;
+  background: #f8faff; /* azul muy suave */
+  border-radius: 12px;
+  padding: 18px;
+  border: 1px solid #d7e4ff;
+  font-family: "Inter", sans-serif;
+  color: #0a2342;
+}
+
+.header-lista {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn-generar {
+  background: #1a73e8;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.2s ease-in-out;
+}
+
+.btn-generar:hover {
+  background: #135ec2;
 }

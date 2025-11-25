@@ -1,89 +1,116 @@
+/* ---------------- SIDEBAR ---------------- */
 .sidebar {
   width: 100%;
   height: 100vh;
-  background-color: #d3f1ff5c; /* gris */
+  background-color: #ffffff; /* MÁS BLANCO PARA ALTO CONTRASTE */
   display: grid;
   grid-template-rows: 5% 95%;
-  grid-template-columns: 100%;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
   padding: 0;
-  border: 2px solid darkgray;
-  border-radius: 0px 0px 10px 0px;
+  border-right: 2px solid #b5cfff; /* azul muy suave */
+  border-radius: 0 0 12px 0;
+  box-shadow: 3px 0 8px rgba(0, 0, 0, 0.07);
 }
 
+/* ---------------- ITEMS ---------------- */
 .items {
   display: flex;
   flex-direction: column;
   height: 100%;
-  gap: 2%;
-  padding-top: 10px;
+  gap: 1rem;
+  padding-top: 15px;
   align-items: center;
 }
 
+/* ---------------- LOGO ---------------- */
 .logo {
-  font-weight: bold;
+  font-weight: 700;
+  color: #0b1a33; /* más oscuro, muy legible */
   text-align: center;
   margin-top: 10px;
+  font-size: 1.1rem;
 }
 
+/* ---------------- MENU ITEMS ---------------- */
 .menu-item {
   display: grid;
   grid-template-columns: 30% 70%;
   align-items: center;
   justify-items: center;
   cursor: pointer;
-  width: 80%;
+  width: 85%;
+  padding: 10px 0px;
+  border-radius: 10px;
+  transition: 0.2s ease;
 }
 
+.menu-item:hover {
+  background-color: #e7f1ff; /* suave pero MÁS visible */
+  box-shadow: 0 2px 6px rgba(30, 136, 229, 0.25);
+}
+
+/* Iconos del menú */
 .menu-item img {
-  width: 20px;
-  height: 20px;
-  margin-bottom: 5px;
+  width: 26px;
+  height: 26px;
+
+  /* AUMENTAR VISIBILIDAD – azul fuerte */
+  filter: brightness(0) saturate(100%) invert(27%) sepia(89%) saturate(2700%)
+    hue-rotate(199deg) brightness(95%) contrast(107%);
+  /* → #1565C0 más visible */
 }
 
+/* Texto del menú */
 .menu-item span {
-  font-size: 12px;
-  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+  color: white; /* azul oscuro para legibilidad */
 }
 
+/* ---------------- BOTÓN CERRAR ---------------- */
 .btn-cerrar {
-  background-color: #ff5a43;
+  background-color: #e53935;
   color: white;
   border: none;
-  padding: 8px 12px;
-  border-radius: 5px;
+  padding: 10px 14px;
+  border-radius: 6px;
   cursor: pointer;
-  margin-bottom: 10px;
+  font-weight: 600;
+  width: 85%;
+  margin-bottom: 12px;
+  transition: 0.2s ease;
 }
 
 .btn-cerrar:hover {
-  background-color: #e64a35;
+  background-color: #c62828;
 }
 
+/* ---------------- BOTÓN ANIMADO ---------------- */
 .btn-animado {
-  background: #d1bcf0;
+  background: #1e88e5;
   color: white;
-  padding: 10px 10px;
+  padding: 12px 16px;
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  font-size: 16px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  font-size: 15px;
+  font-weight: 600;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .btn-animado:hover {
-  transform: scale(1.01);
-  background: #e0d7f8;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  transform: scale(1.04);
+  background: #1565c0;
+  box-shadow: 0px 4px 12px rgba(21, 101, 192, 0.35);
 }
 
+/* ---------------- LINKS ---------------- */
 .colegio_Titulo {
-  color: black;
-  text-decoration-line: none;
+  color: #0a2342;
+  font-weight: 700;
+  text-decoration: none;
 }
 
 a {
-  text-decoration-line: none;
+  text-decoration: none;
+  color: inherit;
 }

@@ -10,30 +10,43 @@ import { TablesProfesoresComponent } from '../tables-profesores/tables-profesore
 })
 export class DashboardCComponent {
   resumen = {
-    planificacionesPendientes: 3,
+    planificacionesPendientes: 1,
     clasesHoy: 2,
-    recursosNuevos: 4,
     avanceCurricular: '75%',
   };
 
   planificaciones = [
     {
-      asignatura: 'Lenguaje',
-      unidad: 'Comprensión Lectora',
-      fecha: '2025-06-01',
-      estado: 'Borrador',
+      asignatura: 'Lenguaje y Comunicación',
+      curso: '1º Basico A',
+      unidad: 'Comprensión de textos orales y lectura inicial',
+      semestre: '1',
+      ano: '2025',
+      estado: 'Sin iniciar',
     },
     {
-      asignatura: 'Matemáticas',
-      unidad: 'Fracciones',
-      fecha: '2025-06-03',
-      estado: 'Publicado',
+      asignatura: 'Lenguaje y Comunicación',
+      curso: '1º Basico B',
+      unidad: 'Comprensión de textos orales y lectura inicial',
+      semestre: '1',
+      ano: '2025',
+      estado: 'Al dia',
     },
     {
-      asignatura: 'Historia',
-      unidad: 'Chile contemporáneo',
-      fecha: '2025-06-05',
-      estado: 'Pendiente',
+      asignatura: 'Lenguaje y Comunicación',
+      curso: '3º Basico A',
+      unidad: 'Comprensión lectora de textos narrativos y no literarios',
+      semestre: '1',
+      ano: '2025',
+      estado: 'Atrasado',
+    },
+    {
+      asignatura: 'Lenguaje y Comunicación',
+      curso: '3º Basico A',
+      unidad: 'Comprensión lectora de textos narrativos y no literarios',
+      semestre: '1',
+      ano: '2024',
+      estado: 'Completado',
     },
   ];
 }

@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
+import { PopUpComponent } from '../pop-up/pop-up.component';
 
 @Component({
   selector: 'app-playground',
-  imports: [],
+  imports: [PopUpComponent],
   templateUrl: './playground.component.html',
-  styleUrl: './playground.component.scss'
+  styleUrl: './playground.component.scss',
 })
-export class PlaygroundComponent {
-
-}
+export class PlaygroundComponent {}

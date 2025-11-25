@@ -1,29 +1,47 @@
 <div class="container">
-  <h1>Asignaturas</h1>
+  <!-- TÍTULO -->
+  <h1>
+    <strong>Lenguaje y Comunicación – 1º Básico B</strong>
+  </h1>
 
-  <div class="curso-info">
-    <p><strong>Curso:</strong> Asignatura - Curso #</p>
-    <p>Unidad 1</p>
+  <!-- ⭐ PESTAÑAS DE UNIDADES -->
+  <div class="tabs">
+    @for (unidad of unidades; track unidad; let i = $index) {
+    <div
+      class="tab"
+      [class.activa]="unidadActiva === i"
+      (click)="cambiarUnidad(i)"
+    >
+      {{ unidad.nombre }}
+    </div>
+    }
   </div>
 
+  <!-- Subtítulo -->
+  <div class="curso-info">
+    <p>{{ unidades[unidadActiva].nombre }}</p>
+  </div>
+
+  <!-- TABLA DE CLASES SEGÚN LA UNIDAD SELECCIONADA -->
   <table>
     <thead>
       <tr>
-        <th>Número de clase</th>
+        <th>Número</th>
         <th>Tema</th>
-        <th>Material asignado</th>
-        <th>Actividad asignada</th>
+        <th>Material</th>
+        <th>Actividad</th>
         <th>Completado</th>
+        <th>Acciones</th>
       </tr>
     </thead>
 
     <tbody>
-      @for(clase of clases; track clase){
+      @for (clase of unidades[unidadActiva].clases; track clase) {
       <tr>
         <td>{{ clase.numero }}</td>
+        <td>{{ clase.tema }}</td>
         <td>{{ clase.material }}</td>
         <td>{{ clase.actividad }}</td>
-        <td>{{ clase.tema }}</td>
 
         <td>
           <label class="switch">
@@ -31,17 +49,18 @@
             <span class="slider"></span>
           </label>
         </td>
+
+        <td>
+          <button class="btn" (click)="enrutamiento(clase.ruta)">
+            <img class="acciones_img" [src]="clase.accion" />
+          </button>
+        </td>
       </tr>
       }
     </tbody>
   </table>
 
   <div class="acciones">
-    <button class="btn">Editar</button>
-    <button class="btn">Añadir</button>
-  </div>
-
-  <div class="nota">
-    <p>Presionar este botón para actualizar avance pedagógico.</p>
+    <button class="btn">Añadir Clase</button>
   </div>
 </div>
