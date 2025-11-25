@@ -15,7 +15,7 @@ export class ConfiguracioDocenteComponent {
 
   usuario = {
     nombre: 'Juan Pérez',
-    especialidad: 'Profesor de Matemáticas',
+    especialidad: 'Profesor de Lenguaje',
     emailPersonal: 'juan.perez@gmail.com',
     emailTrabajo: 'jperez@colegio.cl',
   };

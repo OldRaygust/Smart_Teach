@@ -54,8 +54,7 @@
   height: 26px;
 
   /* AUMENTAR VISIBILIDAD – azul fuerte */
-  filter: brightness(0) saturate(100%) invert(27%) sepia(89%) saturate(2700%)
-    hue-rotate(199deg) brightness(95%) contrast(107%);
+  filter:invert(100%);
   /* → #1565C0 más visible */
 }
 
