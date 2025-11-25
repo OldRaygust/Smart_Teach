@@ -4,19 +4,26 @@
   <thead>
     <tr>
       <th>Asignatura</th>
+      <th>Curso</th>
       <th>Unidad</th>
-      <th>Fecha</th>
+      <th>Semestre</th>
+      <th>Año</th>
       <th>Estado</th>
-      <th>Editar</th>
     </tr>
   </thead>
 
   <tbody>
     <tr *ngFor="let p of planificaciones">
       <td>{{ p.asignatura }}</td>
+      <td>{{ p.curso }}</td>
       <td>{{ p.unidad }}</td>
-      <td>{{ p.fecha }}</td>
-      <td class="estado" [class]="p.estado.toLowerCase()">{{ p.estado }}</td>
+      <td>{{ p.semestre }}</td>
+      <td>{{ p.ano }}</td>
+
+      <!-- Estado con clase convertida a formato CSS -->
+      <td class="estado" [class]="p.estado.toLowerCase().replace(' ', '-')">
+        {{ p.estado }}
+      </td>
     </tr>
   </tbody>
 </table>
