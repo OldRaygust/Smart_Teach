@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { jsPDF } from 'jspdf';
 
 interface RecursoEducativo {
   id: number;
@@ -56,7 +57,19 @@ export class RepositorioComponent {
   }
 
   descargar(recurso: RecursoEducativo) {
-    alert('Simulación de descarga: ' + recurso.titulo);
+    const pdf = new jsPDF();
+
+    pdf.setFontSize(16);
+    pdf.text(recurso.titulo, 10, 10);
+
+    pdf.setFontSize(12);
+    pdf.text('Descripción:', 10, 20);
+    pdf.text(recurso.descripcion || 'Sin descripción', 10, 28);
+
+    pdf.text('Contenido:', 10, 40);
+    pdf.text(recurso.contenido || 'Contenido no disponible', 10, 48);
+
+    pdf.save(recurso.titulo + '.pdf');
   }
 
   eliminar(id: number) {
