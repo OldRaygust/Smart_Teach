@@ -10,35 +10,39 @@ import { Component } from '@angular/core';
 export class AvanceComponent {
   clases = [
     {
-      numero: 1,
-      tema: 'Suma',
-      completado: true,
-      material: 'A',
-      actividad: 'B',
+      numero: '1',
+      tema: 'Reconocimiento del texto y su propósito',
+      completado: false,
+      material: 'Cuento familiar ilustrado',
+      actividad:
+        'Leer en voz alta el cuento y conversar qué mensaje transmite y quién lo escribió',
       accion: '/assets/icons/editar.png',
     },
     {
-      numero: 2,
-      tema: 'Resta',
+      numero: '1',
+      tema: 'Conciencia fonológica: sílabas y fonemas',
       completado: false,
-      material: 'A',
-      actividad: 'B',
+      material: 'Juego de sílabas con tarjetas',
+      actividad:
+        'Separar palabras en sílabas y combinarlas para formar nuevas con tarjetas',
       accion: '/assets/icons/añadir.png',
     },
     {
-      numero: 3,
-      tema: 'Multiplicación',
-      completado: true,
-      material: 'A',
-      actividad: 'B',
+      numero: '1',
+      tema: 'Comprensión de narraciones conocidas',
+      completado: false,
+      material: 'Cuento corto con imágenes',
+      actividad:
+        'Contestar preguntas simples (qué, quién, dónde) sobre el cuento escuchado',
       accion: '/assets/icons/añadir.png',
     },
     {
-      numero: 4,
-      tema: 'División',
+      numero: '1',
+      tema: 'Comprensión emocional y recreación artística',
       completado: false,
-      material: 'A',
-      actividad: 'B',
+      material: 'Dibujo en papel + títeres de papel',
+      actividad:
+        'Dibujar una escena del cuento escuchado y recrear personajes con títeres',
       accion: '/assets/icons/añadir.png',
     },
   ];
