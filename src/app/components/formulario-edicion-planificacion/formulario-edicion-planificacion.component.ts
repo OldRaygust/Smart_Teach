@@ -10,6 +10,7 @@ interface Seccion {
   sugerencias: string[];
   expandido: boolean;
   control: string;
+  texto: string;
 }
 @Component({
   selector: 'app-formulario-edicion-planificacion',
@@ -18,7 +19,16 @@ interface Seccion {
   styleUrl: './formulario-edicion-planificacion.component.scss',
 })
 export class FormularioEdicionPlanificacionComponent {
-  form: FormGroup;
+  constructor(private fb: FormBuilder) {
+    this.form = this.fb.group({
+      apertura: [''],
+      desarrollo: [''],
+      practica: [''],
+      cierre: [''],
+    });
+  }
+
+  form!: FormGroup;
 
   secciones: Seccion[] = [
     {
@@ -32,6 +42,8 @@ export class FormularioEdicionPlanificacionComponent {
       ],
       expandido: false,
       control: 'apertura',
+      texto:
+        'Observar la portada de un cuento e identificar qué creen que tratará. Preguntar: “¿Para qué sirven los cuentos? ¿Quién los escribe?” Presentar el propósito de la clase: comprender que los textos comunican un mensaje.',
     },
     {
       id: 2,
@@ -44,6 +56,8 @@ export class FormularioEdicionPlanificacionComponent {
       ],
       expandido: false,
       control: 'desarrollo',
+      texto:
+        'Lectura en voz alta de un cuento breve ilustrado, destacando el título y el autor. Conversación guiada sobre el mensaje del texto y qué quiere transmitir el autor. Mostrar diferentes tipos de textos (cuento, cartel, tarjeta) y comparar sus propósitos.',
     },
     {
       id: 3,
@@ -56,6 +70,8 @@ export class FormularioEdicionPlanificacionComponent {
       ],
       expandido: false,
       control: 'practica',
+      texto:
+        'Entregar a los estudiantes imágenes de distintos textos y pedir que identifiquen cuál podría ser su propósito. Actividad de marcar con un círculo el título y el autor en una hoja con un mini cuento. Trabajo por parejas: comentar qué mensaje transmite el cuento leído.',
     },
     {
       id: 4,
@@ -68,15 +84,16 @@ export class FormularioEdicionPlanificacionComponent {
       ],
       expandido: false,
       control: 'cierre',
+      texto:
+        'Preguntar: “¿Qué aprendimos hoy sobre los textos?”. Pedir que cada estudiante diga para qué creen que sirve un cuento.Mini evaluación oral: mencionar el título y el autor del cuento leído.',
     },
   ];
 
-  constructor(private fb: FormBuilder) {
-    this.form = this.fb.group({
-      apertura: [''],
-      desarrollo: [''],
-      practica: [''],
-      cierre: [''],
-    });
+  actualizar(control: string, event: Event) {
+    const value = (event.target as HTMLTextAreaElement).value;
+    this.form.patchValue({ [control]: value });
   }
+  guardarPlanificacion() {}
+  descargarPlanificacion() {}
+  descartarPlanificacion() {}
 }

@@ -16,11 +16,15 @@
         </ul>
 
         <textarea
-          placeholder="Escribe aquí la planificación de esta sección..."
+          [placeholder]="
+            'Escribe aquí la planificación de ' + sec.titulo + '...'
+          "
+          (input)="actualizar(sec.control, $event)"
+          >{{ sec.texto }}</textarea
         >
-        </textarea>
       </div>
     </div>
+
     }
   </div>
 
@@ -30,16 +34,52 @@
 
     <div class="preview">
       <h3>Apertura</h3>
-      <p>{{ form.value.apertura }}</p>
+      <p>
+        {{
+          form.value.apertura ||
+            "Observar la portada de un cuento e identificar qué creen que tratará. Preguntar: “¿Para qué sirven los cuentos? ¿Quién los escribe?” Presentar el propósito de la clase: comprender que los textos comunican un mensaje."
+        }}
+      </p>
 
       <h3>Desarrollo</h3>
-      <p>{{ form.value.desarrollo }}</p>
+      <p>
+        {{
+          form.value.desarrollo ||
+            "Lectura en voz alta de un cuento breve ilustrado, destacando el título y el autor. Conversación guiada sobre el mensaje del texto y qué quiere transmitir el autor. Mostrar diferentes tipos de textos (cuento, cartel, tarjeta) y comparar sus propósitos."
+        }}
+      </p>
 
       <h3>Práctica</h3>
-      <p>{{ form.value.practica }}</p>
+      <p>
+        {{
+          form.value.practica ||
+            "Entregar a los estudiantes imágenes de distintos textos y pedir que identifiquen cuál podría ser su propósito. Actividad de marcar con un círculo el título y el autor en una hoja con un mini cuento. Trabajo por parejas: comentar qué mensaje transmite el cuento leído."
+        }}
+      </p>
 
       <h3>Cierre</h3>
-      <p>{{ form.value.cierre }}</p>
+      <p>
+        {{
+          form.value.cierre ||
+            "Preguntar: “¿Qué aprendimos hoy sobre los textos?”. Pedir que cada estudiante diga para qué creen que sirve un cuento.Mini evaluación oral: mencionar el título y el autor del cuento leído."
+        }}
+      </p>
     </div>
+  </div>
+</div>
+
+<div class="acciones">
+  <div class="container-but">
+    <button class="btn guardar" (click)="guardarPlanificacion()">
+      Guardar
+    </button>
+
+    <button class="btn descartar" (click)="descartarPlanificacion()">
+      Descartar Cambios
+    </button>
+
+    <button class="btn descargar" (click)="descargarPlanificacion()">
+      Descargar
+    </button>
   </div>
 </div>
