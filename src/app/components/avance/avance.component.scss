@@ -126,6 +126,7 @@ input:checked + .slider:before {
 
 .acciones_img {
   width: 30px;
+  filter:invert(100%);
 }
 
 .tabs {
