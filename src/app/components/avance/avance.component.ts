@@ -15,6 +15,7 @@ export class AvanceComponent {
       completado: true,
       material: 'A',
       actividad: 'B',
+      accion: '/assets/icons/editar.png',
     },
     {
       numero: 2,
@@ -22,6 +23,7 @@ export class AvanceComponent {
       completado: false,
       material: 'A',
       actividad: 'B',
+      accion: '/assets/icons/añadir.png',
     },
     {
       numero: 3,
@@ -29,6 +31,7 @@ export class AvanceComponent {
       completado: true,
       material: 'A',
       actividad: 'B',
+      accion: '/assets/icons/añadir.png',
     },
     {
       numero: 4,
@@ -36,6 +39,7 @@ export class AvanceComponent {
       completado: false,
       material: 'A',
       actividad: 'B',
+      accion: '/assets/icons/añadir.png',
     },
   ];
 }

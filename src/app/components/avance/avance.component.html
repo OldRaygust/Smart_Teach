@@ -1,8 +1,9 @@
 <div class="container">
-  <h1>Asignaturas</h1>
+  <h1>
+    <p><strong>Curso:</strong> Lenguaje y Comunicación - 1º Básico</p>
+  </h1>
 
   <div class="curso-info">
-    <p><strong>Curso:</strong> Asignatura - Curso #</p>
     <p>Unidad 1</p>
   </div>
 
@@ -14,6 +15,7 @@
         <th>Material asignado</th>
         <th>Actividad asignada</th>
         <th>Completado</th>
+        <th>Acciones</th>
       </tr>
     </thead>
 
@@ -31,17 +33,20 @@
             <span class="slider"></span>
           </label>
         </td>
+
+        <td>
+          <button class="btn">
+            <img class="acciones_img" src="{{ clase.accion }}" alt="" />
+          </button>
+        </td>
       </tr>
       }
     </tbody>
   </table>
 
   <div class="acciones">
-    <button class="btn">Editar</button>
-    <button class="btn">Añadir</button>
+    <button class="btn">Añadir Clase</button>
   </div>
 
-  <div class="nota">
-    <p>Presionar este botón para actualizar avance pedagógico.</p>
-  </div>
+  <div class="nota"></div>
 </div>

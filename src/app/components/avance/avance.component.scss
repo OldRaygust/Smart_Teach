@@ -16,7 +16,8 @@ table {
   margin-top: 15px;
 }
 
-table th, table td {
+table th,
+table td {
   padding: 12px;
   text-align: left;
   border-bottom: 1px solid #ddd;
@@ -93,4 +94,8 @@ input:checked + .slider:before {
 .hand-icon {
   width: 40px;
   margin-right: 10px;
+}
+
+.acciones_img {
+  width: 30px;
 }
