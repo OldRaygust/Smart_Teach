@@ -1,6 +1,6 @@
 <div class="container">
   <h1>Iniciar sesión</h1>
-  <mat-grid-list cols="1" rowHeight="40px">
+  <mat-grid-list cols="1" rowHeight="80px">
     <!---Usuario-->
     <mat-grid-tile
       ><mat-form-field>
@@ -13,7 +13,7 @@
           required
         />
         @if (email.invalid) {
-        <mat-error>{{ errorMessage() }}</mat-error>
+        <mat-error>{{ errorEmailMessage() }}</mat-error>
         }
       </mat-form-field></mat-grid-tile
     >
@@ -24,13 +24,12 @@
         <input
           matInput
           placeholder="*******"
-          [formControl]="email"
           type="password"
           (blur)="updateErrorMessage()"
           required
         />
-        @if (email.invalid) {
-        <mat-error>{{ errorMessage() }}</mat-error>
+        @if (pass.invalid) {
+        <mat-error>{{ errorPassMessage() }}</mat-error>
         }
       </mat-form-field></mat-grid-tile
     >

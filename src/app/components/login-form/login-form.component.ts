@@ -37,15 +37,23 @@ export class LoginFormComponent {
   showFiller = false;
 
   readonly email = new FormControl('', [Validators.required, Validators.email]);
+  readonly pass = new FormControl('', [Validators.required]);
 
-  errorMessage = signal('');
+  errorEmailMessage = signal('');
+  errorPassMessage = signal('');
   updateErrorMessage() {
     if (this.email.hasError('required')) {
-      this.errorMessage.set('You must enter a value');
+      this.errorEmailMessage.set('Debes ingresar un valor');
     } else if (this.email.hasError('email')) {
-      this.errorMessage.set('Not a valid email');
+      this.errorEmailMessage.set('No es un email valido');
     } else {
-      this.errorMessage.set('');
+      this.errorEmailMessage.set('');
+    }
+
+    if (this.pass.hasError('required')) {
+      this.errorPassMessage.set('Debes ingresar un valor');
+    } else {
+      this.errorPassMessage.set('');
     }
   }
   dashboard() {
