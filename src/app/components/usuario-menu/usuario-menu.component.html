@@ -1,0 +1,16 @@
+<div class="user-capsule" (click)="toggleMenu()">
+  <img
+    src="/assets/icons/profile.png"
+    alt="Avatar de usuario"
+    class="user-avatar"
+  />
+  <div class="user-info">
+    <p>Juan Pérez</p>
+  </div>
+
+  <!-- MENÚ DESPLEGABLE -->
+  <div class="user-menu" *ngIf="menuOpen">
+    <button (click)="openConfig($event)">⚙ Configuración</button>
+    <button (click)="logout($event)">🚪Cerrar sesión</button>
+  </div>
+</div>

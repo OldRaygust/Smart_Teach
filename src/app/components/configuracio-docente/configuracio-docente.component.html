@@ -1,0 +1,108 @@
+<div class="settings-container">
+  <!-- TABS -->
+  <div class="tabs">
+    <button
+      class="tab-btn"
+      [class.active]="activeTab === 'perfil'"
+      (click)="activeTab = 'perfil'"
+    >
+      👤 Perfil
+    </button>
+
+    <button
+      class="tab-btn"
+      [class.active]="activeTab === 'seguridad'"
+      (click)="activeTab = 'seguridad'"
+    >
+      🔐 Seguridad
+    </button>
+
+    <button
+      class="tab-btn"
+      [class.active]="activeTab === 'preferencias'"
+      (click)="activeTab = 'preferencias'"
+    >
+      ⚙️ Preferencias
+    </button>
+  </div>
+
+  <!-- PANEL DE CONTENIDO -->
+  <div class="panel">
+    <!-- PERFIL -->
+    @if (activeTab === 'perfil') {
+    <div class="perfil">
+      <h2>Información del Usuario</h2>
+
+      <!-- FOTO -->
+      <div class="foto-section">
+        <img class="foto-perfil" src="assets/icons/profile.png" alt="foto" />
+
+        <button class="btn-secundario">Cambiar foto</button>
+      </div>
+
+      <div class="info-grid">
+        <div class="info-item">
+          <label>Nombre</label>
+          <p>{{ usuario.nombre }}</p>
+        </div>
+
+        <div class="info-item">
+          <label>Especialidad</label>
+          <p>{{ usuario.especialidad }}</p>
+        </div>
+
+        <div class="info-item">
+          <label>Email personal</label>
+          <p>{{ usuario.emailPersonal }}</p>
+        </div>
+
+        <div class="info-item">
+          <label>Email de trabajo</label>
+          <p>{{ usuario.emailTrabajo }}</p>
+        </div>
+
+        <div class="info-item">
+          <label>Estado</label>
+          <p class="estado activo">● Activo</p>
+        </div>
+      </div>
+    </div>
+    }
+
+    <!-- SEGURIDAD -->
+    @if (activeTab === 'seguridad') {
+    <div class="seguridad">
+      <h2>Cambiar contraseña</h2>
+
+      <div class="alerta">
+        <p>Asegúrate de cumplir los requisitos</p>
+        <p class="mini">Mínimo 8 caracteres</p>
+        <p class="mini">Incluir al menos 1 mayúscula</p>
+        <p class="mini">Incluir al menos 1 número</p>
+      </div>
+
+      <div class="form-grid">
+        <mat-form-field appearance="outline">
+          <mat-label>Nueva contraseña</mat-label>
+          <input matInput type="password" />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Confirma nueva contraseña</mat-label>
+          <input matInput type="password" />
+        </mat-form-field>
+      </div>
+
+      <button class="btn-primario">Cambiar contraseña</button>
+    </div>
+    }
+
+    <!-- PREFERENCIAS -->
+    @if (activeTab === 'preferencias') {
+    <div class="preferencias">
+      <h2>Preferencias generales</h2>
+      <p>Próximamente...</p>
+    </div>
+    }
+  </div>
+</div>

@@ -1,0 +1,42 @@
+<div class="container">
+  <h1>Iniciar sesión</h1>
+  <mat-grid-list cols="1" rowHeight="80px">
+    <!---Usuario-->
+    <mat-grid-tile
+      ><mat-form-field>
+        <mat-label>Ingresa tu usuario</mat-label>
+        <input
+          matInput
+          placeholder="pat@example.com"
+          [formControl]="email"
+          (blur)="updateErrorMessage()"
+          required
+        />
+        @if (email.invalid) {
+        <mat-error>{{ errorEmailMessage() }}</mat-error>
+        }
+      </mat-form-field></mat-grid-tile
+    >
+    <!--Contraseña-->
+    <mat-grid-tile
+      ><mat-form-field>
+        <mat-label>Ingresa tu contraseña</mat-label>
+        <input
+          matInput
+          placeholder="*******"
+          type="password"
+          (blur)="updateErrorMessage()"
+          required
+        />
+        @if (pass.invalid) {
+        <mat-error>{{ errorPassMessage() }}</mat-error>
+        }
+      </mat-form-field></mat-grid-tile
+    >
+  </mat-grid-list>
+  <button type="button" class="btn btn-primary" (click)="dashboard()">
+    Iniciar sesión
+  </button>
+  <br />
+  <a href="">Olvidaste tu contraseña?</a>
+</div>

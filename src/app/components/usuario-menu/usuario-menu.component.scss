@@ -1,0 +1,114 @@
+.user-capsule {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: #f5f9ff;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: sans-serif;
+  width: 20%;
+  height: 100%;
+  cursor: pointer;
+}
+
+/* Avatar */
+.user-avatar {
+  width: 10%;
+  height: 90%;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+/* Menú desplegable */
+.user-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: #f5f9ff;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  padding: 10px 0;
+  display: flex;
+  flex-direction: column;
+  width: 180px;
+  opacity: 0;
+  animation: fadeIn 0.2s forwards;
+  z-index: 100;
+}
+
+.user-menu button {
+  background: transparent;
+  border: none;
+  padding: 12px 18px;
+  text-align: left;
+  width: 100%;
+  cursor: pointer;
+  font-size: 0.95em;
+}
+
+.user-menu button:hover {
+  background-color: #e6f2ff; /* tono azure claro */
+}
+
+/* Animación suave */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.user-capsule {
+  display: flex; /* Usa flexbox para alinear los elementos */
+  align-items: center; /* Centra verticalmente los elementos */
+  background-color: #f5f9ff;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: sans-serif;
+  width: 20%;
+  height: 100%;
+}
+
+.user-avatar {
+  width: 10%;
+  height: 90%;
+  border-radius: 50%; /* Hace la imagen redonda */
+  margin-right: 15px;
+}
+
+.user-info {
+  flex-grow: 1; /* Permite que esta parte ocupe el espacio restante */
+}
+
+.user-info h2 {
+  margin: 0 0 5px 0;
+  font-size: 1.2em;
+  color: #333;
+}
+
+.user-info p {
+  margin: 0;
+  font-size: 0.9em;
+  color: #666;
+}
+
+.user-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 15px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+/* Para evitar que el texto sea seleccionable */
+.user-info p {
+  user-select: none; /* O 'text' si quieres que sea seleccionable */
+}
