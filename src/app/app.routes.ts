@@ -9,6 +9,7 @@ import { MaterialEducativoComponent } from './views/material-educativo/material-
 import { PantallaCargaEdicionComponent } from './components/pantalla-carga-edicion/pantalla-carga-edicion.component';
 import { FormularioAdicionComponent } from './views/formulario-adicion/formulario-adicion.component';
 import { ConfiguracionComponent } from './views/configuracion/configuracion.component';
+import { RepDocComponent } from './views/rep-doc/rep-doc.component';
 
 export const routes: Routes = [
   { path: 'login', component: LoginPpageComponent },
@@ -17,6 +18,7 @@ export const routes: Routes = [
   { path: 'formulario', component: FormularioComponent },
   { path: 'repositorio', component: MaterialEducativoComponent },
   { path: 'carga_edicion', component: PantallaCargaEdicionComponent },
+  { path:'repositorio-docente',component:RepDocComponent},
   { path: 'formulario_anadir', component: FormularioAdicionComponent },
   { path: 'configuracion', component: ConfiguracionComponent },
   { path: 'avance', component: AvanceAsignaturaComponent },

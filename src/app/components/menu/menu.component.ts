@@ -25,4 +25,7 @@ export class MenuComponent {
   materialRouting() {
     this.router.navigate(['repositorio']);
   }
+  docRouting() {
+    this.router.navigate(['repositorio-docente']);
+  }
 }
